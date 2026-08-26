@@ -55,7 +55,7 @@ public class Timer_Logic : MonoBehaviour
         float milliseconds = Mathf.FloorToInt((timeToDisplay % 60) * 1000f);
 
         // Format the string as MM:SS (e.g., 05:09)
-        timerText.text = string.Format("{0:00}:{1:00}.{2:000}", minutes, seconds, milliseconds);
+        timerText.text = string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, milliseconds);
     }
     public void AddTime(float amountToAdd)
     {
