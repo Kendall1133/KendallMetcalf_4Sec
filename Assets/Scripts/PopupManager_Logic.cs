@@ -15,19 +15,6 @@ public class PopupManager_Logic : MonoBehaviour
 
     public ScoreManager_Logic scoreManager; //References the ScoreManager script
     public Timer_Logic timer; //References the Timer script
-
-    void Start()
-    {
-        MoveToRandomPosition();
-    }
-
-    public void MoveToRandomPosition()
-    {
-        float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
-
-        transform.position = new Vector3(randomX, randomY);
-    }
     private void OnMouseDown()
     {
         ScoreManager_Logic.Instance.ChangeScore(pointValue);
