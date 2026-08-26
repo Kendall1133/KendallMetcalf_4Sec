@@ -52,10 +52,10 @@ public class Timer_Logic : MonoBehaviour
         // "%" is a Modulo Operator which calculates the remainder left over after division instead of performing the division
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        float milliseconds = Mathf.FloorToInt((timeToDisplay % 60) * 1000f);
+        float milliseconds = Mathf.FloorToInt((timeToDisplay % 60) * 100f);
 
         // Format the string as MM:SS (e.g., 05:09)
-        timerText.text = string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, milliseconds);
+        timerText.text = string.Format("{0:00}:{1:00}.{2:000}", minutes, seconds, milliseconds);
     }
     public void AddTime(float amountToAdd)
     {
