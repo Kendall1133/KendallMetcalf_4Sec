@@ -149,9 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 1
   timeReward: 1
-  minX: -5
-  maxX: 5
-  minY: -2
-  maxY: 2
-  scoreManager: {fileID: 0}
-  timer: {fileID: 0}
+  duration: 2
