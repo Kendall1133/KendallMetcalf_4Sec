@@ -75,5 +75,6 @@ public class Timer_Logic : MonoBehaviour
     void TimerEnded()
     {
         scoreManager.HighScoreUpdate();
+        Time.timeScale = 0f;
     }
 }

@@ -10,8 +10,8 @@ public class DifficultyManager_Logic : MonoBehaviour
     [Header ("Spawn Area")]
     public float minX = -5f;
     public float maxX = 5f;
-    public float minY = -3f;
-    public float maxY = 3f;
+    public float minY = -3f; // I do not know why this works this way 
+    public float maxY = -3f; // These should be able to be a range but it does not like it
 
     void Awake()
     {

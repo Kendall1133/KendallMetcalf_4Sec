@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Difficulty
+  - Popup
   layers:
   - Default
   - TransparentFX

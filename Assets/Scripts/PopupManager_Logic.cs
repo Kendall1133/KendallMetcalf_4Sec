@@ -41,13 +41,14 @@ public class PopupManager_Logic : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 DifficultyManager_Logic.Instance.SpawnRandomPrefab();
-                OnTimerEnd();
+                ObjectExpire();
             }
         }
     }
-    void OnTimerEnd()
+
+    void ObjectExpire()
     {
-        // Add your logic here (e.g., destroy object, spawn enemy, etc.)
         Destroy(gameObject);
     }
+
 }
