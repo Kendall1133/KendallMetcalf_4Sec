@@ -1024,8 +1024,8 @@ MonoBehaviour:
   - {fileID: 199417633671699059, guid: 4b075df63f6210f4e8b2369d7355fc20, type: 3}
   minX: -5
   maxX: 5
-  minY: -2
-  maxY: 2
+  minY: -3
+  maxY: 3
 --- !u!4 &1096396597
 Transform:
   m_ObjectHideFlags: 0
