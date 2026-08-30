@@ -55,7 +55,7 @@ public class Timer_Logic : MonoBehaviour
         // Changing "1000f" to "100f" modified the decimal place for milliseconds to have 3 places instead of 4
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        float milliseconds = Mathf.FloorToInt((timeToDisplay % 60) * 100f);
+        float milliseconds = Mathf.FloorToInt((timeToDisplay % 60) * 100);
 
         // Format the string as MM:SS (e.g., 05:09)
         timerText.text = string.Format("{0:00}:{1:00}.{2:000}", minutes, seconds, milliseconds);

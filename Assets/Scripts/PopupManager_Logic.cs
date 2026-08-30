@@ -3,7 +3,7 @@ using UnityEngine;
 public class PopupManager_Logic : MonoBehaviour
 {
     public int pointValue = 1;
-    public int timeReward = 1;
+    public float timeReward = 1;
 
     public DifficultyManager_Logic difficultyManager;
 
