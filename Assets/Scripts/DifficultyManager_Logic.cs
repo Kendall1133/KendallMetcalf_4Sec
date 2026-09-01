@@ -3,6 +3,7 @@ using UnityEngine;
 public class DifficultyManager_Logic : MonoBehaviour
 {
     public static DifficultyManager_Logic Instance;
+    public PopupManager_Logic PopupManager;
 
     [Header ("Spawnable Prefabs")]
     public GameObject[] prefabsToSpawn;

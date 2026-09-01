@@ -5,23 +5,27 @@ public class PopupManager_Logic : MonoBehaviour
     public int pointValue = 1;
     public float timeReward = 1;
 
+    public static PopupManager_Logic Instance;
     public DifficultyManager_Logic difficultyManager;
 
-    [Header ("Timer Settings")]
-    [SerializeField] private float duration = 5f; // Timer length in seconds
-    private float timeRemaining;
+    [Header("Timer Settings")]
+    [SerializeField] private float duration = 5f; // Individual object lifetime
+    public float timeRemaining;
     private bool timerIsRunning = false;
 
     private void OnMouseDown()
     {
+        // 1. Only allow actions and new spawns if the main game timer hasn't run out
+        if (Timer_Logic.Instance == null || Timer_Logic.Instance.timeRemaining <= 0) return;
+
         ScoreManager_Logic.Instance.ChangeScore(pointValue);
         Timer_Logic.Instance.AddTime(timeReward);
         DifficultyManager_Logic.Instance.SpawnRandomPrefab();
         Destroy(gameObject);
     }
+
     void Start()
     {
-        // Initialize and start the timer
         timeRemaining = duration;
         timerIsRunning = true;
     }
@@ -32,15 +36,19 @@ public class PopupManager_Logic : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                // Subtract the time passed since the last frame
                 timeRemaining -= Time.deltaTime;
             }
             else
             {
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                DifficultyManager_Logic.Instance.SpawnRandomPrefab();
+
+                // 2. Only spawn a replacement if the main game timer is still active
+                if (Timer_Logic.Instance != null && Timer_Logic.Instance.timeRemaining > 0)
+                {
+                    DifficultyManager_Logic.Instance.SpawnRandomPrefab();
+                }
+
                 ObjectExpire();
             }
         }
@@ -50,5 +58,4 @@ public class PopupManager_Logic : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }

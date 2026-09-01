@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Timer_Logic : MonoBehaviour
@@ -75,6 +76,5 @@ public class Timer_Logic : MonoBehaviour
     void TimerEnded()
     {
         scoreManager.HighScoreUpdate();
-        Time.timeScale = 0f;
     }
 }
