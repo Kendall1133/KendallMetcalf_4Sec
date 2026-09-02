@@ -105,9 +105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 1
-  timeReward: 0.5
+  timeReward: 0.6
   difficultyManager: {fileID: 0}
   duration: 1.5
+  timeRemaining: 0
 --- !u!61 &188300490340555018
 BoxCollider2D:
   m_ObjectHideFlags: 0

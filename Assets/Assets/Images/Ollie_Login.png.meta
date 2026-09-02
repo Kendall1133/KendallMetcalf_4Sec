@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6b46e06dc4df9594f913017e0f9c1935
+guid: f2a948c82f3f5b54b93994d243bfcde3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4238711552060958762
-    second: Close_Button_0
+      213: 4802940889910881831
+    second: Ollie_Login_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Close_Button_0
+      name: Ollie_Login_0
       rect:
         serializedVersion: 2
-        x: 2441
-        y: 1297
-        width: 112
-        height: 112
+        x: 0
+        y: 0
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d7df021d421d25c0800000000000000
-      internalID: -4238711552060958762
+      spriteID: 72e2654da4977a240800000000000000
+      internalID: 4802940889910881831
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Close_Button_0: -4238711552060958762
+      Ollie_Login_0: 4802940889910881831
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
